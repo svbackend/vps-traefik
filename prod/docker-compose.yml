@@ -4,13 +4,14 @@ services:
   traefik:
     container_name: traefik
     image: traefik:v2.5
-    command: --providers.docker
+    command: --api.insecure=true --providers.docker
     networks:
       - vps-traefik
     restart: always
     ports:
       - "80:80"
       - "443:443"
+      - "8080:8080"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - ./traefik.toml:/traefik.toml

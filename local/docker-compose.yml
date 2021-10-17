@@ -10,7 +10,7 @@ services:
       - vps-traefik
     ports:
       # The HTTP port
-      - "80:80"
+      - "8000:80"
       # The Web UI (enabled by --api.insecure=true)
       - "8080:8080"
     volumes:
