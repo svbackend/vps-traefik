@@ -31,9 +31,9 @@ services:
         labels:
             - "traefik.docker.network=vps-traefik"
             - "traefik.enable=true"
-            - "traefik.http.routers.clocksum.rule=Host(`some-domain.com`)"
-            - "traefik.http.routers.clocksum.entrypoints=websecure"
-            - "traefik.http.routers.clocksum.tls.certresolver=myresolver"
+            - "traefik.http.routers.some_domain.rule=Host(`some-domain.com`)"
+            - "traefik.http.routers.some_domain.entrypoints=websecure"
+            - "traefik.http.routers.some_domain.tls.certresolver=myresolver"
 ```
 
 and in networks section of docker-compose.yml - add external network for Traefik to know about your service:
