@@ -9,6 +9,7 @@ services:
       - "--api.insecure=true"
       - "--providers.docker"
       - "--providers.docker.exposedbydefault=false"
+      - "--log.level=DEBUG"
     networks:
       - vps-traefik
     ports:
